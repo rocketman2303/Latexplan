@@ -1,0 +1,544 @@
+\chapter{Fabricación de una pieza}
+\label{capitulo 3: Pasos para la fabricacion de una pieza, equipo y materiales}
+
+\section{Proceso para el diseño/fabricación de una pieza elaborada en automated fiber placement}
+
+\subsection{Generalidades del proceso}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=.4\linewidth]{imagenes/fundamentos.png}
+    \caption{Fundamentos de la colocación automatizada de fibras (AFP), Wevolver}
+    \label{fig:enter-label}
+\end{figure}
+
+\begin{enumerate}[label=\arabic*.]
+
+    \item \textbf{Conexión del Cabezal AFP al Brazo Robótico:}
+        Se conecta el cabezal AFP al extremo de un brazo robótico industrial.
+        
+    \item \textbf{Simulación y Programación con Software de Gemelo Digital:}
+        Se simula y programa el movimiento del brazo robótico utilizando un software de gemelo digital, como AddPath.
+
+    \item \textbf{Preparación del Material Compuesto:}
+        Se preparan las tiras de cintas de material compuesto, también conocidas como remolques, que se utilizarán en el proceso.
+
+    \item \textbf{Colocación Automatizada de Fibra:}
+        Mientras se ejecuta el proceso AFP, el cabezal se mueve de acuerdo con la programación para colocar múltiples tiras de cintas de material compuesto sobre la superficie de una herramienta.
+
+    \item \textbf{Garantizar la Adhesión con Calentamiento y Compactación:}
+        Para garantizar una adhesión adecuada entre las tiras de fibra y el sustrato, el cabezal de colocación de fibra utiliza calentamiento y compactación durante el proceso.
+
+    \item \textbf{Control de Tensión del Remolque:}
+        La tensión del remolque se controla cuidadosamente, ya que juega un papel clave en asegurar una colocación precisa de las tiras de material compuesto.
+
+    \item \textbf{Formación de Cursos:}
+        Cada fila de remolques colocados forma un curso durante el proceso.
+
+    \item \textbf{Formación de Capas:}
+        Juntas en un corte de superficie, las tiras de material compuesto forman una capa.
+
+    \item \textbf{Apilamiento Preciso de Capas:}
+        Todas las capas se apilan en una secuencia precisa para formar un laminado.
+
+    \item \textbf{Verificación de Defectos Mínimos:}
+        Se realiza una verificación para asegurar que la colocación de las tiras de material compuesto no tenga defectos significativos.
+
+    \item \textbf{Finalización y Curado:}
+        Una vez completado el apilamiento de capas, la pieza se somete a un proceso de curado para garantizar la consolidación del material compuesto.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=.5\linewidth]{imagenes/flujo de trabajo.jpg}
+    \caption{Representación gráfica del flujo de trabajo AFP de circuito cerrado (losed loop AFP workflow)}
+    \label{fig:enter-label}
+\end{figure}
+
+
+        
+\section{Equipo especializado}
+
+En la actualidad, existen cuatro configuraciones de máquinas disponibles \cite{crosky2012}:
+\begin{enumerate}
+  \item Configuración de la plataforma de bobinado: Esta es la configuración original de la máquina y sigue siendo popular hoy en día. Es ideal para cuerpos de revolución sin cambios bruscos de sección.
+  \item Configuración de columna móvil: Esta configuración de máquina ha ganado popularidad en los últimos años y suele ser utilizada en máquinas de gran tamaño. Un ejemplo se muestra en la Figura \ref{fig:columna_movil}. La dimensión de estas máquinas las hace idóneas para piezas muy grandes con curvatura gradual, como las pieles de las alas.
+  \item Configuración de pórtico de raíles elevados: Utiliza la misma configuración de máquina herramienta que las máquinas de deposición automática de láminas (ATL). El cabezal de la ACF está fijado al eje Z de la máquina, y la fileta de material está montada en el puente transversal del pórtico o en el propio cabezal de suministro.
+  \item Configuración de brazo robótico: Este diseño emplea un brazo robótico articulado disponible en el mercado como sistema de colocación de fibras. Se presenta un ejemplo en la Figura \ref{fig:brazo_robotico}. Este tipo de sistema ACF suele incluir un husillo portaherramientas con accionamiento rotacional y/o lineal. La elevada cantidad de grados de libertad de estos sistemas les permite producir una amplia variedad de piezas, aunque con la contrapartida de requerir sistemas de retroalimentación y control sumamente complejos. A pesar de esto, estos sistemas están experimentando una rápida adopción en la industria debido a su flexibilidad, el descenso de los costos y la creciente confiabilidad de la robótica industrial.
+\end{enumerate}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=.6\linewidth]{imagenes/3.png}
+    \caption{AFP robótica. Cortesía de: Coriolis Composites.}
+    \label{fig:enter-label}
+\end{figure}
+
+Tradicionalmente, el enfoque de la colocación de fibras se ha dirigido principalmente hacia la industria aeroespacial, caracterizándose por máquinas de considerable tamaño y coste elevado. No obstante, en tiempos recientes, han emergido al mercado máquinas de colocación de fibras a escala reducida y sistemas más compactos que emplean robots disponibles comercialmente. Este desarrollo posibilita que empresas de menor envergadura accedan a sistemas automatizados de laminación con dimensiones y costos ajustados a sus necesidades individuales (Grant, 2012). Se ilustra una máquina de pórtico en voladizo en la Figura 4.4, mientras que en la Figura 4.5 se presenta una máquina robotizada de pequeñas dimensiones.
+
+La aplicación de la colocación de fibras puede extenderse a diversas configuraciones de piezas. Sin embargo, este proceso no es universal; algunas piezas son considerablemente más aplicables para la colocación automatizada de fibras (ACF) que otras. Las piezas propicias para ACF suelen ser aquellas que permiten un funcionamiento rápido de la máquina, delegando gran parte del trabajo a la misma, como es el caso de la estructura del fuselaje y el motor.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=.6\linewidth]{imagenes/4.png}
+    \caption{Pequeña máquina ATL de pórtico en voladizo. Cortesía: MTorres Machine Company.}
+    \label{fig:enter-label}
+\end{figure}
+La colocación de fibras encuentra su idoneidad en la fabricación de piezas de elevada complejidad o en aquellas cuyo laminado manual resulta poco práctico. Un ejemplo emblemático de una pieza propicia para la colocación de fibras es el fuselaje del avión de negocios Hawker Beechcraft Premier 1. Diseñado específicamente para este proceso, el fuselaje del Premier 1 presenta una estructura cerrada de sección de barril de 360°, con recortes estratégicos para ventanas y puertas. Además, exhibe variaciones en el grosor del laminado en distintos puntos del fuselaje (Crosky et al., 2012). Similarmente, el fuselaje compuesto del Boeing 787 se erige como otra estructura ideal para la colocación de fibras, conformada por secciones de barril de 360° de gran tamaño que se ensamblan para constituir la totalidad de la longitud del fuselaje. De manera análoga al Boeing 787, el Airbus A350 XWB también recurre a la colocación automatizada de fibras (ACF) para una parte significativa de sus componentes estructurales.
+
+La ventaja económica de la ACF radica en la reducción de la mano de obra en la fabricación, la disminución de la necesidad de inspección en proceso y una considerable reducción de los desechos de material de proceso. Sin embargo, la magnitud de esta ventaja varía según la aplicación, siendo generalmente más pronunciada para componentes de gran envergadura, como la estructura del fuselaje, que permiten el funcionamiento óptimo de la máquina. En contraste, para piezas más pequeñas y complejas que demandan un ritmo de trabajo más lento, la ventaja económica puede ser menos significativa. La baja tasa de desechos de material, comúnmente situada entre el 3 \% y el 5 \%, contribuye de manera sustancial a la ventaja económica de la ACF.
+
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=.7\linewidth]{imagenes/5.png}
+    \caption{Máquina AFP robotizada para la fabricación de piezas pequeñas que normalmente se fabrican mediante laminado manual.}
+    \label{fig:enter-label}
+\end{figure}
+
+
+
+\subsection{Colocación de fibras a medida}
+La colocación localizada y dirigida de fibras se lleva a cabo a través de un proceso denominado tecnología de colocación de fibras a medida (TFP), como se describe por Gliesche et al. (2003). Esta técnica, que constituye una variante de bordado técnico, implica la disposición computarizada y la costura simultánea de hileras de fibras secas sobre un material base para generar una preforma seca con un patrón de fibras específico. Dichas preformas bidimensionales pueden integrarse localmente en laminados estructurales convencionales durante la fase de fabricación, brindando refuerzo en áreas circunscritas, como alrededor de orificios. La versatilidad de la TFP se evidencia en la capacidad para crear componentes tridimensionales más intrincados mediante la infusión de capas de preformas sobre un molde.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=.7\linewidth]{imagenes/6.png}
+    \caption{Colocación localizada de fibras mediante un robot automatizado con un accesorio para suturar.
+Cortesía: Hightex Versta¨rkungsstrukturen GmbH.}
+    \label{fig:enter-label}
+\end{figure}
+
+\subsection{reformado de parches de fibra}
+
+El preformado de parches de fibra (FPP) representa un proceso automatizado desarrollado por EADS Innovation Works (actualmente Airbus Group) y sus colaboradores. A diferencia de la colocación de fibras continuas a lo largo de trayectorias definidas, el FPP construye un laminado mediante múltiples parches cortos de cinta unidireccional, conformados con una figura predefinida. Estos parches son cortados de manera continua a partir de una estrecha tira de material de suministro, para luego ser ubicados de forma robótica en el molde de la pieza. La meticulosa colocación y alineación de los parches otorgan al diseñador la capacidad de fabricar piezas con formas sumamente complejas, sin que se produzcan separaciones significativas entre las capas.
+
+Aunque los laminados generados por FPP no alcanzan la eficiencia mecánica de los procesos de fibra continua debido a las discontinuidades repetidas en las fibras, esta desventaja se compensa en muchas situaciones gracias a las formas altamente intrincadas que pueden ser manufacturadas. Las tasas de deposición de material para FPP son considerablemente más bajas en comparación con otras tecnologías de colocación de fibras.
+
+El FPP tiene dos aplicaciones previstas: la creación de piezas pequeñas de gran complejidad geométrica y el fortalecimiento de otros procesos automatizados menos flexibles (como el trenzado) para proporcionar refuerzo localizado alrededor de orificios y recortes.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=.5\linewidth]{imagenes/7.png}
+    \caption{Preformado de parches de fibra. Cortesía de: EADS-IW}
+    \label{fig:enter-label}
+\end{figure}
+
+
+Los sistemas AFP constan de los siguientes componentes:
+
+\begin{enumerate}
+    \item Herramienta AFP montada en un robot
+    \item Sistema de control de automatización
+    \item Software de planificación y simulación
+\end{enumerate}
+
+\subsection{Equipo especializado: Herramienta AFP montada en un robot}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=.5\linewidth]{imagenes/fundamentos.png}
+    \caption{Fundamentos de la colocación automatizada de fibras (AFP), Wevolver}
+    \label{fig:enter-label}
+\end{figure}
+
+
+
+El cabezal de la herramienta de colocación automatizada de fibras (AFP) maneja una cinta o varias cintas estrechas y las coloca sobre una superficie de molde predefinida de una manera específica.  
+
+El material puede montarse directamente en el cabezal de la herramienta o separarse completamente del sistema y luego enrutarse a través de varios mecanismos para llegar al cabezal. Cada material tiene sus desafíos de manejo, es decir, los materiales termoestables requieren un paso enfriado adicional, mientras que las cintas termoplásticas requieren mucho calor en el extremo de la herramienta.
+
+\subsubsection{Algunas marcas o ejemplos}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=.5\linewidth]{imagenes/bentaja ante el resto_.png}
+    \caption{Una solución rentable para la colocación automatizada de fibras y la colocación automatizada de cintas}
+    \label{fig:enter-label}
+\end{figure}
+
+
+\subsubsection{Colocación automatizada de fibra de un solo remolque AFP-XS de addcomposites}
+
+\begin{itemize}
+    \item \textbf{Introductorio y Modular:}
+        Diseñado como un sistema AFP introductorio y altamente modular. Ideal para aquellos que están dando sus primeros pasos en la fabricación aditiva estructural avanzada.
+    
+    \item \textbf{Preferido en Centros Técnicos e Investigadores:}
+        Se ha convertido en el sistema preferido entre centros técnicos e investigadores. Ideal para aquellos que buscan experimentar con diferentes anchos y tipos de material.
+    
+    \item \textbf{Flexibilidad para Superficies Grandes y Formas Complejas:}
+        Ofrece flexibilidad a los fabricantes para cubrir superficies más grandes. No sacrifica la capacidad de aplicar capas en formas más complejas.
+    
+    \item \textbf{Apreciado por Innovadores:}
+        Sirve mejor a los innovadores que buscan explorar y experimentar con tecnologías de fabricación aditiva. Proporciona libertad y versatilidad para adaptarse a diversas necesidades de aplicación.
+\end{itemize}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=.5\linewidth]{imagenes/maquina 1.png}
+    \caption{Colocación automatizada de fibra de un solo remolque AFP-XS}
+    \label{fig:enter-label}
+\end{figure}
+
+\subsubsection{Colocación automatizada de fibra de remolque múltiple  AFP-X }
+
+\begin{itemize}
+    \item \textbf{AFP de Clase de Producción:}
+        Sistema de remolque múltiple AFP diseñado para la producción a gran escala de piezas complejas.
+    
+    \item \textbf{Alta Tasa de Producción:}
+        Generalmente utilizado para lograr una mayor tasa de producción de piezas complejas.
+
+    \item \textbf{Basado en AFP-XS Probado:}
+        Ofrece todos los beneficios del AFP-XS probado en la práctica.
+
+    \item \textbf{Capacidad de Carga de Material Adicional:}
+        Agrega una capacidad de carga de material adicional de hasta 4 veces más que el AFP-XS.
+
+    \item \textbf{Beneficios en Entornos de Producción Continua:}
+        Altamente beneficioso en entornos de producción continua, especialmente en talleres que trabajan con materiales termoplásticos o termoestables.
+\end{itemize}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=.5\linewidth]{imagenes/maquina 2.png}
+    \caption{Colocación automatizada de fibra de remolque múltiple  AFP-X, addcomposites}
+    \label{fig:enter-label}
+\end{figure}
+
+ 
+
+\susbsubsection{ Bobinado de Cinta AFP}
+
+\begin{itemize}
+    \item \textbf{Ampliación de la Capacidad del AFP-XS:}
+        El sistema de bobinado de cinta amplía la capacidad del AFP-XS.
+
+    \item \textbf{Enrollado con Cinta y Filamentos:}
+        Ofrece la capacidad de enrollar con cinta y objetos enrollados con filamentos, como tanques de hidrógeno, brazos, tubos y accesorios.
+
+    \item \textbf{Versatilidad de Materiales:}
+        Funciona en toda la línea de materiales, desde fibra seca hasta termoestable y termoplástico.
+
+    \item \textbf{Libertad en Investigación y Desarrollo:}
+        Brinda una gran libertad en la investigación y el desarrollo del proceso inicial.
+
+\end{itemize}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=.5\linewidth]{imagenes/maquina 3.png}
+    \caption{Bobinado de Cinta AFP, addcomposites}
+    \label{fig:enter-label}
+\end{figure}
+
+
+\subsection{Equipo especializado: Sistema de control de automatización}
+
+El sistema de control de automatización asegura la comunicación entre el robot y la herramienta, incluidos sus sensores y actuadores. Las herramientas de  AFP de Addcomposites (La marca ofrece una amplia variedad de infromacion sin necesidad de solicitar y esperar una cotizacion de semanas) se puede conectar a múltiples marcas de robots como KUKA, ABB, Fanuc, etc., por lo que es muy importante garantizar una comunicación perfecta con el robot. El sistema de automatización utiliza los protocolos más rápidos disponibles para comunicarse con el controlador del robot, lo que garantiza el envío y la recepción de señales instantáneas.
+
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=.5\linewidth]{imagenes/sistema de control.png}
+    \caption{Controlador de colocación automatizada de fibra (AFP) por el equipo de Addcomposites}
+    \label{fig:enter-label}
+\end{figure}
+
+
+\subsection{Equipo especializado: Planificación y Simulación}
+
+En los últimos años se han producido grandes avances en la optimización de los laminados de AFP con acceso abierto al software de fabricación de compuestos 3D - AddPath. Como consecuencia, ahora es posible diseñar una pieza y simular su fabricación a través de AFP en computadoras personales o de trabajo, lo que permite la fabricación aditiva de compuestos digitales desde casa u oficina con las suscripciones. Puede descargar AddPath directamente desde aquí y comenzar a realizar simulaciones ahora.
+
+Los datos de interacción del usuario sugieren que la dificultad ya no radica en validar los conceptos, sino en descubrir cómo maximizar el potencial de la automatización. El dinero se desvanece cada vez que este equipo realiza tareas sin valor agregado. En consecuencia, los propietarios de las AFP quieren eliminar operaciones innecesarias para que las máquinas puedan concentrarse en la producción. Mediante el uso de herramientas de simulación avanzadas, los programadores de compuestos pueden optimizar sus programas antes de ejecutarlos, aumentando así el tiempo de actividad y liberando al sistema para fabricar productos valiosos. El valor clave que aporta este software de simulación es:
+
+\begin{itemize}
+    \item Simulación para eliminar costosos “ensayos”
+    \item Datos recopilados para mejorar las estimaciones de tiempo de ciclo y ayudar con la planificación de procesos.
+    \item Detecte singularidades del robot y problemas de rango de movimiento, lo que permite la modificación virtual.
+    \item Identifique y evite el calentamiento inconsistente durante el laminado.
+\end{itemize}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=.5\linewidth]{imagenes/sistemas de control.png}
+    \caption{Software de simulación y programación: AddPaths}
+    \label{fig:enter-label}
+\end{figure}
+
+
+\section{Aspectos y componentes de una máquina de colocación automatizada de fibras (Posible clasificación)}
+
+\subsection{Manejo de Materiales}
+
+\subsubsection{Materiales Termoestables:}
+Estos materiales requieren un manejo cuidadoso y a menudo necesitan un ligero calentamiento por encima de la temperatura ambiente para una colocación óptima, pero deben mantenerse por debajo de ciertas temperaturas para evitar un curado prematuro.
+
+\subsubsection{Materiales Termoplásticos:}
+Estos materiales no son pegajosos a temperatura ambiente y requieren calentamiento hasta su punto de fusión para una unión adecuada. Esto puede requerir equipos adicionales, como unidades de calefacción externas.
+
+\subsubsection{Fibra Seca:}
+Estos materiales tampoco son pegajosos y se utilizan como métodos precursores de métodos de infusión similares a RTM para lograr una mayor tasa de producción. Las cintas de fibra seca suelen contener un aglutinante termoplástico en forma de velo, polvo o hilo que se calienta y ayuda con la adherencia durante la colocación.
+
+\subsubsection{Número de Remolques:}
+En la mayoría de los casos, seleccionar un solo sistema de remolque con soporte de ancho variable es suficiente. Sin embargo, para lograr una tasa de producción más alta que la de geometría compleja, se prefieren los cabezales de colocación de fibras de múltiples cables.
+
+\subsection{Control de Temperatura}
+
+La aplicación adecuada de calor es crucial para garantizar la adhesión efectiva de los materiales compuestos. Hay varios sistemas de calefacción disponibles, cada uno con su propio conjunto de características. Los calentadores infrarrojos se utilizan comúnmente, pero pueden tener inconvenientes como una transferencia de calor ineficiente y no uniforme.
+
+\subsection{Tipos de Procesos}
+
+La máquina AFP debe ser lo suficientemente versátil como para adaptarse a diferentes procesos de fabricación, incluida la colocación de fibras, el tendido de cintas y el bobinado de filamentos. Esto garantiza la adaptabilidad a diversas formas y tamaños de piezas.
+
+\section{Plataformas de Movimiento}
+
+La elección de la plataforma de movimiento depende del tamaño y la forma de las piezas que se fabrican. Las opciones incluyen pórticos horizontales, pórticos verticales y brazos robóticos, cada uno de ellos adecuado para aplicaciones específicas.
+
+\subsection{Integración de Software y Planificación de Procesos}
+
+El software utilizado en las operaciones de las AFP juega un papel fundamental, actuando como intermediario entre el diseño, la fabricación y el control de calidad. Una solución de software bien integrada garantiza una planificación y operación eficientes del proceso.
+
+\subsection{Soporte y Mantenimiento}
+
+Dada la complejidad de los sistemas automatizados, el soporte constante del fabricante de equipos originales (OEM) es esencial. Esto incluye actualizaciones de firmware, software de planificación, operaciones y el suministro de repuestos durante un período significativo, normalmente al menos 10 años.
+
+Al comprender estos componentes de costos, los fabricantes pueden tomar decisiones más informadas al seleccionar una máquina AFP, asegurándose de elegir un sistema que satisfaga sus necesidades y presupuesto específicos.
+
+\section{Algunos fabricantes y modelos relevantes:}
+
+\subsection{CORIOLIS C3: CABEZAL ACOPLABLE PARA
+COLOCACIÓN DE FIBRA PARA PIEZAS DE DOBLE CURVATURA}
+
+\subsubsection{Ventajas}
+
+\begin{itemize}
+    \item Bandeja de alta velocidad con pórtico.
+    \item Capacidad de fabricación de fibra termoestable, termoplástica y seca de 1⁄2”.
+    \item Especialmente adecuado para piezas grandes de doble curvatura.
+\end{itemize}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=.5\linewidth]{imagenes/coriolis 3.png}
+    \caption{CORIOLIS C3: CABEZAL ACOPLABLE PARA
+COLOCACIÓN DE FIBRA PARA PIEZAS DE DOBLE CURVATURA}
+    \label{fig:enter-label}
+\end{figure}
+
+
+\subsubsection{Aplicaciones}
+\begin{itemize}
+    \item Fuselaje y panel.
+    \item Paneles cóncavos o convexos con doble curvatura.
+    \item Piezas complejas con radio estrecho.
+    \item Larguero y marco.
+    \item Alta compactación alrededor de los bordes.
+    \item Descensos de capas y rampas sobre las esquinas.
+\end{itemize}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=.5\linewidth]{imagenes/coriolis tecnicas .png}
+    \caption{ESPECIFICACIONES DEL PROCESO AFP}
+    \label{fig:enter-label}
+\end{figure}
+
+
+\subsection{CORIOLIS C2: ROBOT COLOCADOR DE FIBRA BIRECCIONAL DE ALTA VELOCIDAD}
+
+\subsubsection{Ventajas}
+
+\begin{itemize}
+   \item Robot de altas prestaciones para fabricación de piezas de gran tamaño (hasta 80m).
+    \item Productividad maximizada gracias a la colocación de 24 fibras (1/4 de pulgada).
+    \item Funcionalidad exclusiva de reserva automática.
+\end{itemize}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=.5\linewidth]{imagenes/coriolis c2.png}
+    \caption{CORIOLIS C2:  ROBOT COLOCADOR DE FIBRA BIRECCIONAL DE ALTA VELOCIDAD}
+    \label{fig:enter-label}
+\end{figure}
+
+
+
+\subsubsection{Aplicaciones}
+\begin{itemize}
+    \item Robot de altas prestaciones para fabricación de piezas de gran tamaño (hasta 80m).
+    \item Productividad maximizada gracias a la colocación de 24 fibras (1/4 de pulgada).
+    \item Funcionalidad exclusiva de reserva automática.
+\end{itemize}
+
+\subsection{CORIOLIS C5 Compacto: MÁQUINA COLOCADORA DE FIBRAS
+PARA BLANCOS EN FORMA DE RED 2D}
+
+\subsubsection{Ventajas}
+
+\begin{itemize}
+   \item Colocación de alta velocidad con pórtico compacto y mesa giratoria
+    \item Capacidad de fabricación de fibra termoestable, termoplástica y seca de 1½”
+    \item Especialmente adecuado para espacios en blanco con forma de red 2D
+\end{itemize}
+
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=.5\linewidth]{imagenes/coriolis 3.png}
+    \caption{CORIOLIS C5 Compacto: MÁQUINA COLOCADORA DE FIBRAS
+PARA BLANCOS EN FORMA DE RED 2D}
+    \label{fig:enter-label}
+\end{figure}
+
+
+\subsubsection{Aplicaciones}
+\begin{itemize}
+    \item Pilas personalizadas en 2D
+\end{itemize}
+
+\subsection{Máquina automática de colocación de fibras Mongoose Hybrid™}
+
+\section*{Mongoose Hybrid™: Plataforma Integral para la Fabricación e Inspección de Piezas Compuestas}
+
+Mongoose Hybrid™ es la última evolución del icónico AFPM de Ingersoll Machine Tools, lanzado por primera vez en 2009. Esta plataforma multiproceso integral y versátil proporciona capacidades avanzadas para la fabricación e inspección de piezas compuestas de geometría compleja.
+
+\subsubsection*{Características Principales}
+
+\begin{itemize}
+    \item \textbf{Centro Multipropósito:} Mongoose Hybrid™ es un centro multipropósito que complementa las capacidades únicas de colocación de fibra de Mongoose™ con una gama completa de módulos adicionales. Estos módulos permiten colocar cinta, recortar, inspeccionar, imprimir en 3D y fresar.
+
+    \item \textbf{Configuraciones Automáticas:} Las múltiples configuraciones se intercambian y operan automáticamente, aumentando la calidad y la productividad del proceso de laminado.
+
+    \item \textbf{Versatilidad en Materiales:} Mongoose Hybrid™ puede trabajar con una amplia variedad de materiales de fibras de carbono, desde los más comunes hasta los más desafiantes, incluidos epoxis, BMI, termoplásticos, fibra de carbono, fibra de vidrio y más.
+
+    \item \textbf{Adaptabilidad y Optimización:} El tamaño y la configuración de Mongoose Hybrid™ se pueden adaptar y optimizar fácilmente para satisfacer las necesidades específicas de su proceso y usuario final.
+
+    \item \textbf{Configuración:} 4 a 32 remolques paralelos (1/8”, 1/4” o 1/2” de ancho).
+
+    \item \textbf{Múltiples Módulos Automáticos:}
+        \begin{itemize}
+            \item Colocación de fibra.
+            \item Colocación de cinta.
+            \item Recorte.
+            \item Inspección automatizada.
+            \item Fresado.
+        \end{itemize}
+
+    \item \textbf{Control CNC Siemens:} Equipado con CNC Siemens 840 D y Sinumerik One para un control preciso y eficiente.
+
+    \item \textbf{Software Propietario:} Programación, simulación, optimización y diagnósticos realizados mediante el software propietario de Ingersoll.
+
+    \item \textbf{Sectores de Aplicación:} Espacio, Aeroespacial, Naval, Automoción.
+\end{itemize}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=.5\linewidth]{imagenes/moongose.png}
+    \caption{Máquina automática de colocación de fibras Mongoose Hybrid™}
+    \label{fig:enter-label}
+\end{figure}
+
+
+
+\section{¿cuanto vale una maquina?}
+
+\subsection{Fabricante A}
+
+Una máquina colocadora de cinta capaz de fabricar piezas de hasta 25' x 120'.
+
+Precio base: \$3.500.000.
+
+Con funciones adicionales (software, posprocesador, registro del historial de piezas, instalación): Aproximadamente \$4.182.000.
+
+Una máquina de la mitad de tamaño costaría entre un 5 y un 7\% menos.
+
+\subsection{Fabricante B}
+
+Una máquina colocadora de cinta de 16 pies de ancho, capaz de fabricar piezas de hasta 140 pies de largo.
+
+Precio base: Aproximadamente entre \$2,5 y \$2,6 millones de dólares.
+
+Con todas las funciones incluidas: Entre \$4,25 y \$4,8 millones de dólares.
+
+Una adición de 20 pies de ancho aumentaría el costo en \$200,000.
+
+\subsection*{Fabricante C}
+
+Un sistema de colocación de fibra capaz de colocar hasta 32 estopas de 0.125" de ancho a una velocidad de hasta 1200 in/min.
+
+Rango de precios: Entre \$4,5 y \$6 millones de dólares por una máquina con un recorrido de 30' x 28,5' x 5'.
+
+\section{Otros aspectos a considerar}
+La colocación de fibras es una extensión de las tecnologías generales de fabricación automatizada de composites, que se han ido desarrollando a lo largo de muchas décadas. La fabricación automatizada engloba cualquier tecnología en la que las fibras se añaden a una pieza sin la intervención manual de un operario. Los principales factores que impulsan la fabricación automatizada son la reducción de los costes de mano de obra, la mejora de la velocidad y la eficacia, y un control más estricto de los procesos de fabricación.
+los procesos de fabricación y las tolerancias de las piezas. Las ventajas de la fabricación automatizada deben sopesarse con los elevados costes de infraestructura y el complejo funcionamiento de estos sistemas.
+Las tecnologías de fabricación automatizada han evolucionado rápidamente hasta el punto de que es posible colocar y orientar a voluntad hileras individuales (haces de fibras) o cintas estrechas de fibra en una pieza laminada. Debido a la naturaleza ortotrópica de las propiedades de las fibras, la colocación de hilos ofrece la oportunidad de fabricar piezas muy optimizadas. El resultado final teórico de dicha optimización es una pieza de material compuesto con fibras colocadas específicamente para soportar cargas de servicio sin material redundante. Este objetivo podría ser impracticable en un futuro próximo, pero la colocación de fibras puede aumentar el diseño tradicional para reducir el peso estructural y reducir el desperdicio de materia prima. Sin embargo, las mejoras en la pieza final deben sopesarse con el coste de orientar las fibras en las posiciones requeridas. La colocación dirigida de fibras es necesariamente más lenta y compleja que la colocación de cintas de fibras de orientación constante.
+
+
+\section{Definición de las trayectorias de los refuerzos y las fibras}
+
+
+\subsection{Acolchado}
+
+Una aproximación elemental a la colocación de fibras es la inclusión de capas adicionales de fibra de refuerzo en áreas específicas donde se anticipan cargas más elevadas. Aunque las fibras no se extienden continuamente por toda la pieza, la carga se transmite gradualmente a través de tensiones de cizallamiento interlaminar. Este método, conocido como acolchado, ha sido utilizado desde antes de la introducción de las técnicas de fabricación automatizada y aún se emplea en piezas fabricadas mediante tecnologías como ATL y AFP. Sin embargo, el acolchado no aprovecha completamente los beneficios de la colocación de fibras, ya que la orientación de las fibras adicionales permanece constante en toda la región acolchada, sin adaptarse para respaldar una carga específica. El acolchado se define generalmente en función de un requisito de tensión, añadiendo capas adicionales hasta que la tensión disminuye por debajo de un umbral crítico.
+
+\subsection{Refuerzo de Agujeros y Recortes}
+
+El refuerzo de agujeros y recortes es un objetivo común en la colocación de fibras. Las concentraciones de tensiones generadas por agujeros en un laminado suelen ser más pronunciadas en materiales compuestos que en estructuras metálicas. El campo de tensiones varía rápidamente alrededor de los orificios, lo que hace que las capas acolchadas resulten redundantes para soportar las cargas deseadas. Una solución más eficaz implica la colocación de fibras. Este enfoque permite añadir fibras a un laminado existente en una orientación que se adapte exactamente a los requisitos locales de soporte de carga, optimizando el peso y la rigidez. Si las cargas en los agujeros son bien conocidas, se pueden encontrar soluciones mediante trayectorias dirigidas. Para cargas más variables, el proceso de Tecnología de Colocación de Fibras a Medida (TFP) puede añadir rigidez radial y tangencial al laminado.
+
+\subsection{Refuerzo de la Trayectoria}
+
+\subsubsection{Método de las Tensiones Principales}
+
+El método de las tensiones principales, utilizado para definir las trayectorias de las fibras orientadas (Tosh y Kelly, 2000; Li et al., 2002a), produce dos patrones distintos: las trayectorias de tensión principal de tracción y las de compresión. Para componentes sometidos a un solo tipo de carga, el diseño de la tensión principal revela un patrón dominante, mientras que las trayectorias complementarias u ortogonales tienen un patrón menos destacado y están menos cargadas. En consecuencia, una mayor fracción de fibras se coloca a lo largo del patrón dominante, con una menor fracción a lo largo del patrón complementario, como en el caso de un puntal de tensión.
+
+
+En diversas estructuras, las fibras pueden exhibir una dirección dominante localmente dentro de la configuración. Para ilustrar, se presentan las trayectorias de tensión en las proximidades de un agujero sometido a carga con un pasador, como se muestra en la figura 4.9 (Li et al., 2002a). En este escenario, ambos patrones están considerablemente cargados, demandando un refuerzo mediante fibras orientadas de manera apropiada. Otros ejemplos se encuentran descritos en Kelly et al. (2001a) y Li et al. (2002b).
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=.4\linewidth]{imagenes/8.png}
+    \caption{ Preforma TFP que proporciona refuerzo radial y circunferencial.
+Cortesía: LayStitch Technologies}
+    \label{fig:enter-label}
+\end{figure}
+
+En el caso de materiales anisótropos, como los laminados compuestos, se emplea un procedimiento iterativo para determinar los patrones de fibras. Inicialmente, se establecen las trayectorias de las tensiones principales para una estructura isotrópica mediante análisis de elementos finitos (Tosh y Kelly, 2000). Luego, las orientaciones del material se derivan a partir de los ángulos principales, actualizándose estas orientaciones en cada elemento finito junto con las propiedades equivalentes del material para un compuesto unidireccional. El análisis de elementos finitos se repite y las orientaciones se actualizan en cada iteración. Este proceso persiste hasta que no se detecta ningún cambio apreciable en los patrones de fibra entre iteraciones consecutivas. A continuación, los vectores de tensiones principales se convierten en un contorno mediante el algoritmo de trazado de corrientes de TECPLOT. Posteriormente, códigos en Fortran y C++ se utilizan para convertir estos datos en coordenadas x-y (Crosky et al., 2012).
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=.5\linewidth]{imagenes/9.png}
+    \caption{Tensión principal máxima (tracción) s11, Trayectorias de tensiones principales para un agujero cargado con un pasador (Li et al., 2002a).}
+    \label{fig:enter-label}
+\end{figure}
+
+El principio subyacente en las trayectorias basadas en las tensiones principales es que las fibras asumen las cargas asociadas a las tensiones principales, con un esfuerzo cortante limitado soportado por la resina en el plano de las fibras. No obstante, en el ejemplo de la figura 4.9, la transferencia de carga desde la capa de fibras en compresión en la superficie del agujero hasta la capa de fibras en tensión, que redistribuye la carga más allá del agujero hasta el límite cargado, implica considerar el cizallamiento interlaminar al evaluar los posibles tipos de fallo cerca del agujero (Crosky et al., 2012).
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=.5\linewidth]{imagenes/10.png}
+    \caption{8 Tensión principal mínima (compresión) s22 trayectorias, Trayectorias de tensiones principales para un agujero cargado con un pasador (Li et al., 2002a).}
+    \label{fig:enter-label}
+\end{figure}
+
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=.5\linewidth]{imagenes/11.png}
+    \caption{Trayectorias de la trayectoria de carga para un agujero cargado con un pasador (Li et al., 2006).}
+    \label{fig:enter-label}
+\end{figure}
+
+\section{Adopción por el sector y tendencias futuras}
+La aplicación de la colocación automatizada de fibras (PFA) ya es una práctica común en los grandes fabricantes de equipos originales aeronáuticos y aeroespaciales. Sin embargo, su implementación en las cadenas de suministro y las pequeñas y medianas empresas se ve limitada por la significativa inversión de capital que requiere. En este contexto, la automatización (\textbf{A}) se destaca como el impulso principal detrás de la PFA en lugar de la colocación de fibras (\textbf{FP}). Esto se debe a la necesidad de producir piezas de gran tamaño en series de producción considerables.
+
+Aunque la PFA ha avanzado considerablemente, aún no se ha alcanzado completamente su verdadero potencial: la capacidad de alinear directamente las orientaciones de las fibras con los requisitos de carga en dominios geométricos complejos. Diversos factores continúan limitando su aplicación a gran escala:
+
+\begin{enumerate}
+    \item La colocación dirigida de fibras es intrínsecamente más lenta en comparación con la colocación de material de orientación continua. Esta disparidad de velocidad aumenta con la complejidad creciente de las trayectorias colocadas.
+    
+    \item Muchas técnicas de fabricación de colocación de fibras no han alcanzado el nivel de madurez tecnológica necesario para su aplicación en la producción a gran escala, como es el caso de la colocación de fibras en la industria textil.
+    
+    \item Las herramientas analíticas y numéricas para prever el rendimiento mecánico de las piezas de fibra colocada no han evolucionado al mismo ritmo que el proceso de fabricación. Cada nuevo diseño de colocación de fibras se considera actualmente un desafío único de ensayo y certificación, ya que aún no existen técnicas analíticas generales para predecir con precisión el comportamiento de clases enteras de piezas de fibra reforzada.
+\end{enumerate}
+
+A pesar de estos desafíos, incluso pequeñas aplicaciones de tecnología de colocación de fibras, como el refuerzo de orificios cargados, pueden conducir a mejoras sustanciales en reducción de peso y rendimiento. Esto está impulsando la gradual adopción de la tecnología, especialmente en sectores de alto rendimiento como la industria aeroespacial y la automoción de lujo.
+
+En el frente de la oferta, se espera que las mejoras en las capacidades de software para integrar CAD, análisis mecánico, diseño de trayectorias, optimización y modelización de procesos de fabricación impulsen aún más la implementación industrial de la colocación de fibras. En cuanto a la demanda, las regulaciones que exigen vehículos más eficientes, es decir, más ligeros, para reducir las emisiones, aumentarán el valor relativo de la colocación de fibras, haciendo que sea más atractiva a pesar de los costos asociados con su fabricación.
+
+\textbf{}
